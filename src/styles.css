@@ -148,7 +148,23 @@
   }
 
   body {
-    background-color: var(--color-background);
+    background: radial-gradient(1200px 600px at 10% -10%, #DFF4FF 0%, transparent 60%),
+                radial-gradient(1000px 500px at 100% 10%, #FFE7D9 0%, transparent 55%),
+                var(--color-background);
     color: var(--color-foreground);
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
   }
+}
+
+@utility glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid var(--glass-border);
+}
+
+@utility gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
